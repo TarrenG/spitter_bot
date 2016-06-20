@@ -1,13 +1,16 @@
 import string
-
+from Settings import channel
 
 def getUser(line):
-	separate = line.split(":", 2)
-	user = separate[1].split("!", 1)[0]
-	return user
+        if (line != ":tmi.twitch.tv USERSTATE #"+channel):
+                separate = line.split(":") #, 2
+                user = separate[1].split("!")[0]
+                return user
 
 def getMessage(line):
-    seperate = line.split(":", 2)
-    msg = seperate[2]
-    return msg
-    
+        if (line != ":tmi.twitch.tv USERSTATE #"+channel):
+                seperate = line.split(":")
+                msg = seperate[2]
+                return msg
+
+                
