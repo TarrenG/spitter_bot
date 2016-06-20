@@ -13,8 +13,7 @@ def joinRoom(s):
             print(line)
             loading = loadingComplete(line);
    # sendMessage(s, "/me spits on everyone in chat")
-    
-            
+                
 
 def loadingComplete(line):
     if("End of /NAMES list" in line):
